@@ -1,14 +1,24 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Search from './Search';
 
-const App = () => {
-  return (
-    <div>
-      <h1>
-        <Search />
-      </h1>
-    </div>
-  );
-};
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      gifs: [],
+      selectedGifId: null
+    };
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>
+          <Search />
+        </h1>
+      </div>
+    );
+  }
+}
 
 export default App;
