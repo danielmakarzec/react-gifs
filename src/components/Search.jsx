@@ -4,23 +4,14 @@ class Search extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: 'search',
-      num: 1,
+      gifName: 'Ex. Elon Musk'
     };
   }
 
-  handleClick = () => {
-    this.setState({num: this.state.num + 1});
-    console.log(`clicked: ${this.state.num}`);
-  }
 
   render() {
-    const { name } = this.state;
     return (
-      <div onClick={this.handleClick}>
-        { name }
-        _component
-      </div>
+      <input type="text" className="form-control form-search" value={this.state.gifName} />
     );
   }
 }

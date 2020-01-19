@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Search from './Search';
+import Gif from './Gif';
 
 class App extends Component {
   constructor() {
@@ -13,9 +14,15 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>
+        <div className="left">
           <Search />
-        </h1>
+          <div className="selected-gif">
+            <Gif />
+          </div>
+        </div>
+        <div className="right">
+          <div className="gif-list"></div>
+        </div>
       </div>
     );
   }
