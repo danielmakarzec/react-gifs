@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import Search from './Search';
 import Gif from './Gif';
+import GifList from './Gif-list';
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       gifs: [],
-      selectedGifId: null
+      selectedGifId: 'JNn14pu8SXPeP16uzF'
     };
   }
 
@@ -17,11 +18,13 @@ class App extends Component {
         <div className="left">
           <Search />
           <div className="selected-gif">
-            <Gif />
+            <Gif id={this.state.selectedGifId} />
           </div>
         </div>
         <div className="right">
-          <div className="gif-list"></div>
+          <div className="gif-list">
+            <GifList gifs={this.state.gifs} />
+          </div>
         </div>
       </div>
     );
